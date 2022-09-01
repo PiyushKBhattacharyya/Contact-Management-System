@@ -24,7 +24,6 @@ ADDRESS = StringVar()
 CONTACT = StringVar()
 
 #============================METHODS=====================================
-
 def Database():
     conn = sqlite3.connect("pythontut.db")
     cursor = conn.cursor()
@@ -79,7 +78,6 @@ def UpdateData():
         AGE.set("")
         ADDRESS.set("")
         CONTACT.set("")
-        
     
 def OnSelected(event):
     global mem_id, UpdateWindow
@@ -149,11 +147,9 @@ def OnSelected(event):
     contact = Entry(ContactForm, textvariable=CONTACT,  font=('arial', 14))
     contact.grid(row=5, column=1)
     
-
     #==================BUTTONS==============================
     btn_updatecon = Button(ContactForm, text="Update", width=50, command=UpdateData)
     btn_updatecon.grid(row=6, columnspan=2, pady=10)
-
 
 def DeleteData():
     if not tree.selection():
@@ -231,14 +227,9 @@ def AddNewWindow():
     contact = Entry(ContactForm, textvariable=CONTACT,  font=('arial', 14))
     contact.grid(row=5, column=1)
     
-
     #==================BUTTONS==============================
     btn_addcon = Button(ContactForm, text="Save", width=50, command=SubmitData)
     btn_addcon.grid(row=6, columnspan=2, pady=10)
-
-
-
-
     
 #============================FRAMES======================================
 Top = Frame(root, width=500, bd=1, relief=SOLID)
