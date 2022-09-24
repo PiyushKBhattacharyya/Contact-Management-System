@@ -7,7 +7,11 @@ PRE-REQUISITE KNOWLEDGE:
 3. DBMS
 
 DEPENDENCIES:
+Tkinter
 ```
-pip install tkinter, sqlite
-
+pip install tkinter 
+```
+sqlite
+```
+sqlite
 ```
